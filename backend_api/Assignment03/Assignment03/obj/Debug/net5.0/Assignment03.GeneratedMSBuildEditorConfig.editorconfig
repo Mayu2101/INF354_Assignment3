@@ -1,0 +1,10 @@
+is_global = true
+build_property.TargetFramework = net5.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.PublishSingleFile = 
+build_property.IncludeAllContentForSelfExtract = 
+build_property._SupportedPlatformList = Android,iOS,Linux,macOS,Windows
+build_property.RootNamespace = Assignment03
+build_property.ProjectDir = C:\Users\mayur\Desktop\Mayurie\Campus\2022\INF 354\Assignment 3\assingment_3_student_memo_backend_api\backend_api\Assignment03\Assignment03\

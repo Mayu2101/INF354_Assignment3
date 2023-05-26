@@ -1,0 +1,16 @@
+<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card class="box">
+      <mat-card-header>
+        <mat-card-title>Enter One-Time Pin</mat-card-title>
+      </mat-card-header>
+      <form class="form" [formGroup]="otpFormGroup">
+        <mat-card-content>
+          <mat-form-field class="full-width">
+            <mat-label>OTP</mat-label>
+            <input matInput placeholder="Enter the 4 digit valid OTP" formControlName="Otp">
+          </mat-form-field>
+        </mat-card-content>
+        <button mat-stroked-button color="primary" class="btn-block" (click)="SubmitOtp()">Send</button>
+      </form>
+    </mat-card>
+  </div>

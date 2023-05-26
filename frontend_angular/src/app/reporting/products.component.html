@@ -1,0 +1,71 @@
+
+<div *ngIf="chartsLoaded">  
+  <div fxLayout="row wrap" fxLayoutGap="16px grid" >
+    <div fxFlex="10%" fxFlex.xs="0%" fxFlex.sm="0%" ></div>
+    <div fxFlex="33.33%" fxFlex.xs="100%" fxFlex.sm="40%" >
+      <canvas baseChart 
+              [data]="brandData" 
+              [type]="'pie'"
+              [options]="brandChartOptions"
+             >
+      </canvas>
+    </div>
+    <div fxFlex="10%" fxFlex.xs="0%" fxFlex.sm="0%" >
+    </div>
+
+    <div fxFlex="33.33%" fxFlex.xs="100%" fxFlex.sm="40%" >
+      <canvas baseChart 
+              [data]="productTypeData" 
+              [type]="'pie'"
+              [options]="productTypeChartOptions"
+            >
+      </canvas>
+    </div>
+    <div fxFlex="10%" fxFlex.xs="0%" fxFlex.sm="0%" ></div>
+  </div>
+
+ <div fxLayout="row wrap" fxLayoutGap="16px grid" >
+  <div fxFlex="10%" fxFlex.xs="10%" fxFlex.sm="10%" ></div>
+  <div fxFlex="85%" fxFlex.xs="85%" fxFlex.sm="85%" >
+   <div class="mat-elevation-z8">
+
+    <h2 style="text-align: center;">Top 10 most expensive products</h2>
+
+    <table mat-table [dataSource]="dataSource" matSort>
+  
+      <ng-container matColumnDef="Name">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+        <td mat-cell *matCellDef="let product"> {{product.productName}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="Price">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Price </th>
+        <td mat-cell *matCellDef="let product"> {{product.productPrice}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Brand">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Brand </th>
+        <td mat-cell *matCellDef="let product"> {{product.productBrand}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Type">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Type </th>
+        <td mat-cell *matCellDef="let product"> {{product.productType}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Description">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Description </th>
+        <td mat-cell *matCellDef="let product"> {{product.productDescription}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+    </table>
+    
+    </div>
+    <div fxFlex="5%" fxFlex.xs="5%" fxFlex.sm="5%" ></div>
+  </div>
+</div>
+
+
